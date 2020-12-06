@@ -1,6 +1,6 @@
 {
   "name": "zod-express-guard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Zod middleware generator for type safe request validation",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "tsc",
     "clean": "rm -rf tsconfig.tsbuildinfo dist",
     "build:clean": "npm run clean && npm run build",
-    "prepublishOnly": "npm test && npm run build:clean && rm -rf dist/*.map dist/**/*.map",
+    "prepare": "npm test && npm run build:clean && rm -rf dist/*.map dist/**/*.map",
     "pretest": "npm run build:clean",
     "lint": "eslint src/**/*.ts"
   },
@@ -47,5 +47,20 @@
     "hooks": {
       "pre-commit": "npm run lint"
     }
-  }
+  },
+  "keywords": [
+    "zod",
+    "express",
+    "middleware",
+    "types",
+    "validation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roziscoding/zod-express-guard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roziscoding/zod-express-guard/issues"
+  },
+  "homepage": "https://github.com/roziscoding/zod-express-guard#readme"
 }
