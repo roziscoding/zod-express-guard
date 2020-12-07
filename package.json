@@ -1,6 +1,6 @@
 {
   "name": "zod-express-guard",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Zod middleware generator for type safe request validation",
   "main": "dist/index.js",
   "scripts": {
