@@ -3,19 +3,25 @@
   "version": "1.0.4",
   "description": "Zod middleware generator for type safe request validation",
   "main": "dist/index.js",
+  "engines": {
+    "node": ">=10 >=12 >=14"
+  },
   "scripts": {
     "test": "mocha test/**/*.test.ts -r ts-node/register",
     "build": "tsc",
     "clean": "rm -rf tsconfig.tsbuildinfo dist",
     "build:clean": "npm run clean && npm run build",
-    "prepare": "npm test && npm run build:clean && rm -rf dist/*.map dist/**/*.map",
+    "prepare": "npm test && npm run build:clean && rm -rf dist/*.map dist/**/*.map && npm run all-shields-cli",
     "pretest": "npm run build:clean",
-    "lint": "eslint src/**/*.ts"
+    "lint": "eslint src/**/*.ts",
+    "all-shields-cli": "all-shields-generate"
   },
   "author": "Roz <roz@rjmunhoz.me>",
   "license": "GPL-3.0",
   "devDependencies": {
+    "@ptkdev/all-shields-cli": "^1.2.0",
     "@types/chai": "^4.2.14",
+    "@types/express": "^4.17.9",
     "@types/mocha": "^8.0.4",
     "@types/sinon": "^9.0.9",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
@@ -27,6 +33,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
+    "express": "^4.17.1",
     "gitmoji-cli": "^3.2.12",
     "husky": "^4.3.0",
     "mocha": "^8.2.1",
@@ -34,8 +41,6 @@
     "sinon": "^9.2.1",
     "ts-node": "^9.1.0",
     "typescript": "^4.1.2",
-    "@types/express": "^4.17.9",
-    "express": "^4.17.1",
     "zod": "^1.11.11"
   },
   "peerDependencies": {
@@ -48,7 +53,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run lint && npm run all-shields-cli"
     }
   },
   "keywords": [
@@ -65,5 +70,5 @@
   "bugs": {
     "url": "https://github.com/roziscoding/zod-express-guard/issues"
   },
-  "homepage": "https://github.com/roziscoding/zod-express-guard#readme"
+  "homepage": "https://github.com/roziscoding/zod-express-guard"
 }

@@ -1,6 +1,20 @@
-## zod-express-guard
+# zod-express-guard
 
 Small package intended to use zod to make express request type-safe.
+
+---
+
+<!-- all-shields/badges:START -->
+[![](https://img.shields.io/github/workflow/status/roziscoding/zod-express-guard/Node.js%20CI?label=tests&style=flat-square)](https://github.com/roziscoding/zod-express-guard/actions?query=workflow%3A%22Node.js+CI%22) [![](https://img.shields.io/github/workflow/status/roziscoding/zod-express-guard/Node.js%20Package?label=build&style=flat-square)](https://github.com/roziscoding/zod-express-guard/actions?query=workflow%3A%22Node.js+Package%22) [![](https://img.shields.io/badge/latest-v1.0.4-CB3837.svg?style=flat-square&logo=npm)](https://www.npmjs.com/package/zod-express-guard) [![](https://img.shields.io/npm/l/zod-express-guard?style=flat-square)]() 
+<!-- all-shields/badges:END -->
+<!-- all-shields/engines:START -->
+[![](https://img.shields.io/node/v/zod-express-guard?style=flat-square&logo=node.js&logoColor=white&color=339933)]() [![](https://img.shields.io/node/v-lts/zod-express-guard?style=flat-square&logo=node.js&logoColor=white&color=339933)]() 
+<!-- all-shields/engines:END -->
+<!-- all-shields/dependencies:START -->
+[![](https://img.shields.io/npm/dependency-version/zod-express-guard/peer/zod?style=flat-square)]() [![](https://img.shields.io/npm/dependency-version/zod-express-guard/peer/express?style=flat-square)]() [![](https://img.shields.io/npm/dependency-version/zod-express-guard/peer/@types/express?style=flat-square)]() 
+<!-- all-shields/dependencies:END -->
+
+---
 
 ## Installation
 

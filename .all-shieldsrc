@@ -1,0 +1,56 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "shields": [
+    {
+      "id": "badges",
+      "badges": [
+        {
+          "url": "{{homepage}}/actions?query=workflow%3A%22Node.js+CI%22",
+          "custom": "/github/workflow/status/roziscoding/{{name}}/Node.js%20CI?label=tests&style=flat-square"
+        },
+        {
+          "url": "{{homepage}}/actions?query=workflow%3A%22Node.js+Package%22",
+          "custom": "/github/workflow/status/roziscoding/{{name}}/Node.js%20Package?label=build&style=flat-square"
+        },
+        {
+          "url": "https://www.npmjs.com/package/{{name}}",
+          "logo": "npm",
+          "label": "latest",
+          "message": "v{{version}}",
+          "style": "flat-square",
+          "color": "CB3837"
+        },
+        {
+          "custom": "/npm/l/{{name}}?style=flat-square"
+        }
+      ]
+    },
+    {
+      "id": "engines",
+      "badges": [
+        {
+          "custom": "/node/v/{{name}}?style=flat-square&logo=node.js&logoColor=white&color=339933"
+        },
+        {
+          "custom": "/node/v-lts/{{name}}?style=flat-square&logo=node.js&logoColor=white&color=339933"
+        }
+      ]
+    },
+    {
+      "id": "dependencies",
+      "badges": [
+        {
+          "custom": "/npm/dependency-version/{{name}}/peer/zod?style=flat-square"
+        },
+        {
+          "custom": "/npm/dependency-version/{{name}}/peer/express?style=flat-square"
+        },
+        {
+          "custom": "/npm/dependency-version/{{name}}/peer/@types/express?style=flat-square"
+        }
+      ]
+    }
+  ]
+}
