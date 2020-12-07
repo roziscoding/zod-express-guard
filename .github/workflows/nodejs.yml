@@ -24,7 +24,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
     - run: 'npm i -D @types/express'
     - run: 'npm i express zod'
+    - run: npm ci
     - run: npm test
