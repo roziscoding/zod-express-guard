@@ -18,14 +18,15 @@ Small package intended to use zod to make express request type-safe.
 
 ## Installation
 
-Zod, Express and @types/express are peer dependencies, so you can change versions without having to
-wait for me to update this library. That means you have to install them manually like this:
-
-`npm i -D @types/express && npm i express zod`
-
-After you've installed the peer dependencies, go ahead and install this:
+Just install with your favorite package manager:
 
 `npm i zod-express-guard`
+
+Zod, Express and @types/express are peer dependencies, so you can change versions without having to
+wait for me to update this library. Newer versions of npm resolve these by default, but you can do
+it manually like this:
+
+`npm i -D @types/express && npm i express zod`
 
 ## Usage
 
