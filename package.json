@@ -4,14 +4,14 @@
   "description": "Zod middleware generator for type safe request validation",
   "main": "dist/index.js",
   "engines": {
-    "node": ">=10 >=12 >=14"
+    "node": ">=16"
   },
   "scripts": {
     "test": "mocha test/**/*.test.ts -r ts-node/register",
     "build": "tsc",
     "clean": "rm -rf tsconfig.tsbuildinfo dist",
     "build:clean": "npm run clean && npm run build",
-    "prepare": "npm test && npm run build:clean && rm -rf dist/*.map dist/**/*.map && npm run shields",
+    "prepublishOnly": "npm test && npm run build:clean && rm -rf dist/*.map dist/**/*.map && npm run shields",
     "pretest": "npm run build:clean",
     "lint": "eslint src/**/*.ts",
     "shields": "all-shields-generate"

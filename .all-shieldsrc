@@ -27,9 +27,6 @@
       "id": "engines",
       "badges": [
         {
-          "custom": "/node/v/{{name}}?style=flat-square&logo=node.js&logoColor=white&color=339933"
-        },
-        {
           "custom": "/node/v-lts/{{name}}?style=flat-square&logo=node.js&logoColor=white&color=339933"
         }
       ]

@@ -11,7 +11,7 @@ Small package intended to use zod to make express request type-safe.
 <!-- all-shields/badges:END -->
 <!-- all-shields/engines:START -->
 
-[![](https://img.shields.io/node/v/zod-express-guard?style=flat-square&logo=node.js&logoColor=white&color=339933)]() [![](https://img.shields.io/node/v-lts/zod-express-guard?style=flat-square&logo=node.js&logoColor=white&color=339933)]()
+[![](https://img.shields.io/node/v-lts/zod-express-guard?style=flat-square&logo=node.js&logoColor=white&color=339933)]()
 
 <!-- all-shields/engines:END -->
 <!-- all-shields/dependencies:START -->
