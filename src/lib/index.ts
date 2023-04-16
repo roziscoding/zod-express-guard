@@ -15,7 +15,7 @@ type SchemaDefinition<TBody, TQuery, TParams> = Partial<{
 
 const check = <TType>(obj?: any, schema?: z.Schema<TType>): obj is TType => {
   if (!schema) return true
-  return schema.check(obj)
+  return schema.safeParse(obj).success
 }
 
 export const validate = <TBody = unknown, TQuery = unknown, TParams = unknown>(
