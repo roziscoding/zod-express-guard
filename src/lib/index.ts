@@ -1,5 +1,5 @@
 import { NextFunction, Request, RequestHandler, Response } from 'express'
-import { ZodSchema } from 'zod'
+import z from 'zod'
 
 type ValidatedMiddleware<TBody, TQuery, TParams> = (
   req: Request<TParams, any, TBody, TQuery>,
@@ -8,14 +8,14 @@ type ValidatedMiddleware<TBody, TQuery, TParams> = (
 ) => any
 
 type SchemaDefinition<TBody, TQuery, TParams> = Partial<{
-  body: ZodSchema<TBody>
-  query: ZodSchema<TQuery>
-  params: ZodSchema<TParams>
+  body: z.Schema<TBody>
+  query: z.Schema<TQuery>
+  params: z.Schema<TParams>
 }>
 
-const check = <TType>(obj?: any, schema?: ZodSchema<TType>): obj is TType => {
+const check = <TType>(obj?: any, schema?: z.Schema<TType>): obj is TType => {
   if (!schema) return true
-  return schema.check(obj)
+  return schema.safeParse(obj).success
 }
 
 export const validate = <TBody = unknown, TQuery = unknown, TParams = unknown>(
@@ -55,16 +55,16 @@ export const validate = <TBody = unknown, TQuery = unknown, TParams = unknown>(
 }
 
 export const validateBody = <TBody>(
-  body: ZodSchema<TBody>,
+  body: z.Schema<TBody>,
   middleware: ValidatedMiddleware<TBody, unknown, unknown>
 ) => validate({ body }, middleware)
 
 export const validateQuery = <TQuery>(
-  query: ZodSchema<TQuery>,
+  query: z.Schema<TQuery>,
   middleware: ValidatedMiddleware<unknown, TQuery, unknown>
 ) => validate({ query }, middleware)
 
 export const validateParams = <TParams>(
-  params: ZodSchema<TParams>,
+  params: z.Schema<TParams>,
   middleware: ValidatedMiddleware<unknown, unknown, TParams>
 ) => validate({ params }, middleware)
